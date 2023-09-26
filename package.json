@@ -17,7 +17,8 @@
     "publish:browser": "pnpm run build:browser && (cd packages/browser; pnpm publish)",
     "publish:server": "pnpm run build:server && (cd packages/server/npm; pnpm publish)",
     "dev:browser": "lerna run test:watch --scope=@simplewebauthn/browser",
-    "dev:server": "lerna run test:watch --scope=@simplewebauthn/server"
+    "dev:server": "lerna run test:watch --scope=@simplewebauthn/server",
+    "prepare": "npm run build:types && npm run build:browser && npm run build:server"
   },
   "devDependencies": {
     "@types/express": "^4.17.9",
